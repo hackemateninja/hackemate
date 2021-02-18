@@ -12,7 +12,7 @@ export default function Hero({title, description, emoji}: Hero) {
 		<header className="Hero">
 			<div className="p-2 bg-grey-900 border-primary-400 border-2 rounded-full h-32 w-32 flex items-center justify-center">
 				{
-					!emoji ? <Image src="/goreact.png" alt={title} layout="intrinsic" width={80} height={65} /> : <span className="text-6xl">{emoji}</span>
+					!emoji ? <Image src="/goreact.png" alt={title} layout="responsive" width={80} height={63} /> : <span className="text-6xl">{emoji}</span>
 				}
 			</div>
 			<h1 className="text-2xl title my-4 text-center">{title}</h1>

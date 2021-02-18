@@ -23,7 +23,11 @@ export default function Nav(){
 							<Menu route={route} key={route.path} />
 						))
 					}
-					<Search className="icon-svg"/>
+					<Link href="search">
+						<a>
+							<Search className="icon-svg"/>
+						</a>
+					</Link>
 				</ul>
 				<div className="flex w-1/3  justify-end">
 					<button className="text-grey-400 mr-1 md:mr-5 text-xs md:text-sm font-black">

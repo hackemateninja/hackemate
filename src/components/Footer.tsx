@@ -29,23 +29,23 @@ export default function Footer() {
 					))}
 				</ul>
 				<div className="flex flex-row items-center w-full md:w-3/12 justify-evenly py-3">
-					<a href={`https://instagram.com/${SITE.instagram}`} target="_blank">
+					<a href={`https://instagram.com/${SITE.instagram}`} rel="noopener" target="_blank">
 						<Instagram className="icon-svg" />
 					</a>
-					<a href={`https://github.com/${SITE.github}`} target="_blank">
+					<a href={`https://github.com/${SITE.github}`} rel="noopener" target="_blank">
 						<GitHub className="icon-svg" />
 					</a>
-					<a href={`https://linkedin.com/${SITE.linkedIn}`} target="_blank">
+					<a href={`https://linkedin.com/${SITE.linkedIn}`} rel="noopener" target="_blank">
 						<LinkedIn className="icon-svg" />
 					</a>
-					<a href={`https://twitter.com/${SITE.twitter}`} target="_blank">
+					<a href={`https://twitter.com/${SITE.twitter}`} rel="noopener" target="_blank">
 						<Twitter className="icon-svg" />
 					</a>
-					<a href={`https://youtube.com/${SITE.youtube}`} target="_blank">
+					<a href={`https://youtube.com/${SITE.youtube}`} rel="noopener" target="_blank">
 						<YouTube className="icon-svg" />
 					</a>
 				</div>
-				<a href="https://bushidolabs.io" target="_blank" className="mt-2">
+				<a href="https://bushidolabs.io"  rel="noopener" target="_blank" className="mt-2">
 					<Image
 						src="/white_bushido.png"
 						alt="Bushido Labs"
