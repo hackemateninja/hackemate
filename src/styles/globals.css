@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: "Cinzel Decorative";
+	src: url("/fonts/CinzelDecorative.ttf");
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+}
+
+body{
+	@apply bg-dark text-white;
+}
+button{
+	@apply pointer-scale;
+}
+
+.button-border{
+	@apply border border-grey-500 hover:border-grey-400 text-xs font-black py-1 px-5;
+}
+
+.description{
+	@apply  text-xs tracking-wider font-bold;
+}
+
+.gradient{
+	@apply bg-gradient-to-r from-complementary-300 via-secondary-400 to-primary-400
+}
+.Hero {
+	@apply mt-10 w-2/3 mx-auto h-full flex flex-col items-center justify-evenly;
+}
+.icon-svg{
+	@apply fill-current text-grey-400 h-5 w-5 cursor-pointer hover:text-primary-400;
+}
+.main-line-gradient{
+	@apply w-full h-2 gradient;
+}
+
+.pointer-scale{
+	@apply cursor-pointer transform hover:scale-110 transition duration-200;
+}
+.post-container{
+	@apply w-full p-5 md:p-16 flex flex-col items-center;
+}
+.post-container-row{
+	@apply w-full p-5 md:p-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5;
+}
+
+.title{
+	@apply font-display tracking-widest text-grey-300;
+}
