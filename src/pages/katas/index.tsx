@@ -1,4 +1,4 @@
-import { getSortedPostsData } from '@/libs/blogReader';
+import { getKatas, getSortedPostsData } from '@/libs/blogReader';
 import Hero from '@/components/Hero';
 import META from '@/const/META';
 import Seo from '@/components/Seo';
@@ -24,8 +24,7 @@ export default function Katas({allPostsData}) {
 
 
 export async function getStaticProps() {
-  const postsData = getSortedPostsData()
-  const allPostsData = postsData.filter(x => x.type === 'guide')
+  const allPostsData = getKatas()
   return {
     props: {
       allPostsData

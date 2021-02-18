@@ -1,4 +1,4 @@
-import { getSortedPostsData } from '@/libs/blogReader';
+import { getSortedPostsData, getTemplates } from '@/libs/blogReader';
 import Hero from '@/components/Hero';
 import META from '@/const/META';
 import Seo from '@/components/Seo';
@@ -20,8 +20,7 @@ export default function Templates({allPostsData}) {
 
 
 export async function getStaticProps() {
-  const postsData = getSortedPostsData();
-  const allPostsData = postsData.filter(x => x.type === 'template')
+  const allPostsData = getTemplates()
   return {
     props: {
       allPostsData

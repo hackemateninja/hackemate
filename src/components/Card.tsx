@@ -6,7 +6,7 @@ export default function Card({id, title, access, type, image, date, description}
   return(
     <section className="h-84 bg-grey-800" >
       <div className="main-line-gradient"/>
-      <Link href={`/${id}`} prefetch={access === true}>
+      <Link href={`/${id}`}>
         <a>
           <header>
             <Image src={image} alt={title} height={160} width={435} layout="responsive" />

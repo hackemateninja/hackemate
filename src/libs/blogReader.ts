@@ -35,6 +35,21 @@ export function getSortedPostsData() {
   })
 }
 
+export function getKatas (){
+  const posts = getSortedPostsData()
+  return posts.filter(x => x["type"] === 'guide');
+}
+
+export function getTemplates (){
+  const posts = getSortedPostsData()
+  return posts.filter(x => x["type"] === 'template');
+}
+
+export function getPro (){
+  const posts = getSortedPostsData()
+  return posts.filter(x => x["access"] === 'pro');
+}
+
 export function getAllPostIds() {
   const fileNames = fs.readdirSync(postsDirectory)
 

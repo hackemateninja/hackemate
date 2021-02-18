@@ -1,4 +1,4 @@
-import { getSortedPostsData } from '@/libs/blogReader';
+import { getPro, getSortedPostsData } from '@/libs/blogReader';
 import Hero from '@/components/Hero';
 import Link from "next/link";
 import Pagination from '@/components/Pagination';
@@ -21,8 +21,7 @@ export default function Pro({allPostsData}) {
 
 
 export async function getStaticProps() {
-  const postsData = getSortedPostsData()
-  const allPostsData = postsData.filter(x => x.access === 'pro')
+  const allPostsData = getPro()
   return {
     props: {
       allPostsData
