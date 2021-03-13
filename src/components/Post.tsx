@@ -11,7 +11,7 @@ export default function Post({id, date, title, access, type}){
             {title}
             <span className="bg-secondary-400 text-dark px-1 ml-1 text-xs">{type}</span>
           </h2>
-          <span className="text-grey-500 font-bold text-xs w-1/6 text-right hover:text-primary-400">{`${accessEmoji} Read`}</span>
+          <span className="text-grey-300 font-bold text-xs w-1/6 text-right hover:text-primary-400">{`${accessEmoji} Read`}</span>
         </a>
       </Link>
     </section>

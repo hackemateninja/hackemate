@@ -11,9 +11,9 @@ export default function Seo({ meta: pageMeta }) {
     title: SITE.title,
     description: SITE.description,
     og: SITE.og,
+    follow: true,
     ...pageMeta
   };
-
 
 
   return (
@@ -22,7 +22,7 @@ export default function Seo({ meta: pageMeta }) {
       <meta charSet="utf-8" />
       <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
       <meta content="width=device-width, initial-scale=1" name="viewport" />
-      <meta name="robots" content="follow, index" />
+      <meta name="robots" content={`${meta.follow ? "follow, index" : "noindex"}`} />
       <link rel="shortcut icon" href={SITE.icon}/>
       <meta content={meta.description} name="description" />
       <meta

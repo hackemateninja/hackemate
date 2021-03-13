@@ -18,6 +18,7 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "stripe": "^8.136.0",
+    "swr": "^0.4.2",
     "tailwindcss": "^2.0.3"
   },
   "devDependencies": {

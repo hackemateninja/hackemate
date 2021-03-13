@@ -2,7 +2,7 @@ import { getPro, getSortedPostsData } from '@/libs/blogReader';
 import Hero from '@/components/Hero';
 import Link from "next/link";
 import Pagination from '@/components/Pagination';
-import Post from '@/components/post';
+import Post from '@/components/Post';
 import META from '@/const/META';
 import Seo from '@/components/Seo';
 

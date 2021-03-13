@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Post from '@/components/post';
+import Post from '@/components/Post';
 
 export default function Pagination({allPostsData, Component}){
   const lenPosts = allPostsData.length;

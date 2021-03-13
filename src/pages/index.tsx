@@ -1,19 +1,19 @@
 import META from '@/const/META';
 import Hero from '@/components/Hero';
-import Post from '@/components/post';
+import Post from '@/components/Post';
 import Pagination from '@/components/Pagination';
 import Seo from '@/components/Seo';
-import { getSortedPostsData } from '@/libs/blogReader';
+import query from '@/libs/cms';
 
 
 
-export default function Home({allPostsData}) {
+export default function Home({posts}) {
   return(
     <>
       <Seo meta={META.HOME}/>
       <Hero title={META.HOME.title} description={META.HOME.description}/>
       <article className="post-container">
-        <Pagination allPostsData={allPostsData} Component={Post}/>
+        <Pagination allPostsData={posts} Component={Post}/>
       </article>
     </>
   )
@@ -21,10 +21,23 @@ export default function Home({allPostsData}) {
 
 
 export async function getStaticProps() {
-  const allPostsData = getSortedPostsData()
+
+
+	const { posts } = await query({
+		query: `
+		{
+			posts {
+				title
+				date
+				access
+				slug
+			}
+		}`,
+});
+
   return {
     props: {
-      allPostsData
+      posts
     }
   }
 }
